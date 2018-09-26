@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery 遍历</title>
+	<style>
+.ancestors *
+{ 
+display: block;
+border: 2px solid lightgrey;
+color: lightgrey;
+padding: 5px;
+margin: 15px;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+</script>
+<script>
+$(document).ready(function(){
+  //$("span").parent().css({"color":"red","border":"2px solid red"});
+  $('#btn1').click(function  () {
+  	 $('span').parents().css({"color":"red","border":"2px solid red"});
+  });
+  $('#btn2').click(function  () {
+  	 $("span").parentsUntil("div").css({"color":"red","border":"2px solid red"});
+  });
+  
+});
+</script>
+</head>
+<body>
+
+<div class="ancestors">
+  <div style="width:500px;">div (曾祖父)
+    <ul>ul (祖父)  
+      <li>li (直接父)
+        <span>span</span>
+      </li>
+    </ul>   
+  </div>
+
+  <div style="width:500px;">div (祖父)   
+    <p>  <span>span</span>p (直接父)
+      
+      </p> 
+  </div>
+  <button id="btn1">点击这里选择所有祖先元素</button>
+  <button id="btn2">两元素之间的所有祖先元素</button>
+</div>
+ 
+	</body>
+</html>
+<!--
+	什么是遍历？
+        jQuery 遍历，意为“移动”，用于根据其相对于其他元素的关系来“查找”（或选取）HTML 元素。
+                     以某项选择开始，并沿着这个选择移动，直到抵达您期望的元素为止
+                    这些 jQuery 方法很有用，它们用于向上遍历 DOM 树：
+            parent()
+            parents()
+            parentsUntil()
+        parent() 方法返回被选元素的直接父元素。该方法只会向上一级对 DOM 树进行遍历。
+        parents() 方法返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<html>)。
+        parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。
+        
+-->

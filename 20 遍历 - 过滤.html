@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> 遍历 - 过滤</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("div p").first().css("background-color", "yellow");
+				$("p").last().css("background-color", "blue");
+				$("p").eq(1).css("background-color","pink");
+				$('p').filter('.intro').css('background-color','palevioletred');
+				$('p').not('.intro').css('background-color','deeppink');
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<h1>欢迎来到我的主页</h1>
+		<div>
+			<p>这是 div 中的一个段落。</p>
+		</div>
+
+		<div>
+			<p>这是 div 中的另一个段落。</p>
+		</div>
+
+		<p>这也是段落。</p>
+		<p class="intro">我住在 Duckburg。</p>
+        <p class="intro">我爱 Duckburg。</p>
+	</body>
+
+</html>
+<!--
+	缩写搜索元素的范围 三个最基本的过滤方法是：
+	first(),//返回被选元素的首个元素
+	last(),//返回被选元素的最后一个元素
+	eq(), //返回被选元素中带有指定索引号的元素,索引号从 0 开始
+	filter() //方法允许您规定一个标准。不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回
+	not()//返回不匹配标准的所有元素
+	它们允许您基于其在一组元素中的位置来选择一个特定的元素。 
+	其他过滤方法，比如 filter() 和 not() 允许您选取匹配或不匹配某项指定标准的元素
+-->

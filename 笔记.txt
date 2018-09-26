@@ -1,0 +1,29 @@
+
+jQuery 库 - 特性
+jQuery 是一个 JavaScript 函数库。
+jQuery 库包含以下特性：
+    HTML 元素选取
+    HTML 元素操作
+    CSS 操作
+    HTML 事件函数
+    JavaScript 特效和动画
+    HTML DOM 遍历和修改
+    AJAX
+    Utilities
+
+一：
+1.jq元素选择器
+jquery根据css选择器来选择元素，
+$("p") 选取 <p> 元素。
+$("p.intro") 选取所有 class="intro" 的 <p> 元素
+$("p#demo") 选取所有 id="demo" 的 <p> 元素
+
+2.jq属性选择器
+jQuery 使用 XPath 表达式来选择带有给定属性的元素。
+$("[href]") 选取所有带有 href 属性的元素。
+$("[href='#']") 选取所有带有 href 值等于 "#" 的元素。
+$("[href!='#']") 选取所有带有 href 值不等于 "#" 的元素。
+$("[href$='.jpg']") 选取所有 href 值以 ".jpg" 结尾的元素。
+
+3.jqcss选择器
+jQuery CSS 选择器可用于改变 HTML 元素的 CSS 属性

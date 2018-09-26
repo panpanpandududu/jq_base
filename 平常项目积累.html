@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>笔记积累</title>
+	</head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<!--
+   empty定义和用法:
+    empty() 方法从被选元素所有子节点和内容。
+       注意：该方法不会移除元素本身，或它的属性。
+       提示：如需移除元素，但保留数据和事件，请使用 detach() 方法。
+       提示：如需移除元素及它的数据和事件，请使用 remove() 方法。
+-->
+	<script>
+		$(document).ready(function(){
+	        $(".btn1").click(function(){
+		       $("div").empty();
+	            });
+	        $(".btn2").click(function(){
+		       $("div").detach();
+	            });
+	        $(".btn3").click(function(){
+		       $("div").remove();
+	            });
+          });
+	</script>
+	<body>
+		<div style="height:100px;background-color:yellow">
+                            这是一些文本。
+                <p>这是div块中的一个段落。</p>
+        </div>
+        <p>这是div块外部的一个段落。</p>
+        <button class="btn1">移除div块中的内容</button>
+        <button class="btn2">删除整个div元素,但会保留数据和事件</button>
+        <button class="btn3">删除整个div元素及其它的数据和事件</button>
+	</body>
+</html>
+<!--
+	JavaScript parseInt() 函数
+-->
